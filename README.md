@@ -1,34 +1,51 @@
-<p align="center">
-  <img src="game/Assets/sollertia_white.svg" alt="Sollertia Logo" width="360" style="background-color:#0a0e17; padding: 24px 32px; border-radius: 12px;">
-</p>
+# <p align="center"> <img src="game/Assets/sollertia_white.svg" alt="Sollertia Logo" width="360" style="background-color:#0a0e17; padding: 24px 32px; border-radius: 12px;"> </p>
 
 <h3 align="center">A mixed-reality dexterity and hand-eye coordination rehabilitation system for stroke recovery patients.</h3>
 
-<p align="center">Built at UGAHacks XI.</p>
+<p align="center">
+  Built with passion at <strong>UGAHacks XI</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Unity-6-white?logo=unity&logoColor=black" alt="Unity 6">
+  <img src="https://img.shields.io/badge/C%23-%23239120.svg?logo=csharp&logoColor=white" alt="C#">
+  <img src="https://img.shields.io/badge/Meta_Quest_3-0081FB?logo=meta&logoColor=white" alt="Meta Quest 3">
+  <img src="https://img.shields.io/badge/OpenXR-%23474747.svg?logo=openxr&logoColor=white" alt="OpenXR">
+  <img src="https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/badge/Arduino-00979D?logo=arduino&logoColor=white" alt="Arduino">
+  <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License">
+</p>
 
 ---
 
-## What It Does
+## 💡 What It Does
 
 Sollertia is an AR/VR tool that helps stroke patients rebuild dexterity and hand-eye coordination. Patients wear a Meta Quest 3 headset and interact with illuminated buttons on a virtual table surface using their index and middle fingers — training both the fine motor control needed to press accurately and the visual-motor coordination needed to locate and reach each button. The system tracks touch accuracy and response time across a timed session, giving clinicians measurable data on recovery progress.
 
-## Why It Matters
+## 🧠 Why It Matters
 
 Stroke survivors often lose fine motor control, and traditional rehabilitation exercises can feel repetitive and unmotivating. Sollertia turns finger dexterity training into a focused, trackable activity inside an immersive environment — making sessions more engaging for patients while giving clinicians concrete performance data.
 
-## How It Works
+## ⚙️ How It Works
 
 1. **Clinician launches the app** on Meta Quest 3 and is greeted by a clean main menu with a settings panel (AR passthrough toggle, session config).
 2. **Patient begins a session** by tapping the "Begin Session" button — no controllers needed, just hand tracking.
 3. **Buttons light up one at a time** on a virtual table. The patient reaches out and presses them with their fingertip.
 4. **Session ends after 45 seconds**, displaying total buttons pressed. The clinician records the result and can run another session by restarting the app.
 
-## Tech Stack
+---
 
-- **Unity 6** (6000.3.7f1) with Universal Render Pipeline
-- **OpenXR** + XR Interaction Toolkit for cross-platform VR
-- **Meta Quest 3** hand tracking (no controllers required)
-- **C#** — single self-contained script that creates the entire experience at runtime
+## 🛠 Tech Stack
+
+| Component | Technology |
+| :--- | :--- |
+| **Engine** | **Unity 6** (6000.3.7f1) with Universal Render Pipeline |
+| **Hand Tracking** | **Meta Quest 3** (Controllerless Interaction) |
+| **Framework** | **OpenXR** + XR Interaction Toolkit |
+| **Logic** | **C#** (Single self-contained script for runtime generation) |
+| **Hardware** | **Rust** (Dashboard) + **Arduino** (Pressure sensors) |
+
+---
 
 ## Project Structure
 
@@ -47,6 +64,8 @@ sollertia/
 └── README.md
 ```
 
+---
+
 ## Running the Demo
 
 1. Open `game/` in Unity 6 (2023.3+)
@@ -56,6 +75,8 @@ sollertia/
 
 For Quest 3 deployment, see [`QUEST_DEPLOYMENT.md`](game/Assets/Scripts/Sollertia/QUEST_DEPLOYMENT.md).
 
+---
+
 ## Future Directions
 
 - **Biosensing integration** — pressure sensors on fingertips to capture actual force data during presses, giving clinicians richer dexterity metrics
@@ -63,9 +84,13 @@ For Quest 3 deployment, see [`QUEST_DEPLOYMENT.md`](game/Assets/Scripts/Sollerti
 - **Longitudinal tracking** — session-over-session dashboards so clinicians can visualize recovery trends over weeks and months
 - **Adaptive difficulty** — automatically adjust button speed and spacing based on patient performance
 
+---
+
 ## Team
 
 Built by the Sollertia team at UGAHacks XI.
+
+---
 
 ## License
 
