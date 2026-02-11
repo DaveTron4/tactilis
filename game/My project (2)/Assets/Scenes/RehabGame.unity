@@ -944,6 +944,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &634561397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7790715067418814007, guid: 44772939af309fa4794aaaefe318a132, type: 3}
+  m_PrefabInstance: {fileID: 4964461716881357108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &660959607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,7 +2478,7 @@ MonoBehaviour:
   requestBodyTrackingPermissionOnStartup: 0
   requestFaceTrackingPermissionOnStartup: 0
   requestEyeTrackingPermissionOnStartup: 0
-  requestScenePermissionOnStartup: 0
+  requestScenePermissionOnStartup: 1
   requestRecordAudioPermissionOnStartup: 0
   requestPassthroughCameraAccessPermissionOnStartup: 0
   _localDimming: 1
@@ -2846,7 +2851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24abacdaba03144e861e74573e80cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  buttonGrid: {fileID: 0}
+  buttonGrid: {fileID: 634561397}
   indexFingerTip: {fileID: 2039550829}
   arUI: {fileID: 980577008}
   inputWatcher: {fileID: 341871247}
@@ -3328,12 +3333,12 @@ MonoBehaviour:
   pointsLostForWrong: 5
   pointsLostForTimeout: 3
   buttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4964461716881357119}
+  - {fileID: 4964461716881357118}
+  - {fileID: 4964461716881357117}
+  - {fileID: 4964461716881357116}
+  - {fileID: 4964461716881357116}
+  - {fileID: 670456943}
   blueFingerTip: {fileID: 2039550829}
   redFingerTip: {fileID: 327901256}
   touchRadius: 0.03
@@ -3394,11 +3399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4989676820590498219, guid: 44772939af309fa4794aaaefe318a132, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.84803
+      value: -0.277
       objectReference: {fileID: 0}
     - target: {fileID: 4989676820590498219, guid: 44772939af309fa4794aaaefe318a132, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.70829
+      value: -0.028
       objectReference: {fileID: 0}
     - target: {fileID: 4989676820590498219, guid: 44772939af309fa4794aaaefe318a132, type: 3}
       propertyPath: m_LocalPosition.z

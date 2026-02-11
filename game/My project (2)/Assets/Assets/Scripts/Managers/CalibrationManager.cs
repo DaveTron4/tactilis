@@ -144,6 +144,14 @@ public class CalibrationManager : MonoBehaviour
                     StartPositioning();
                 }
                 break;
+
+            case CalibrationState.Confirmed:
+                // Left pinch to re-position
+                if (leftPinching && !wasLeftPinching)
+                {
+                    StartPositioning();
+                }
+                break;
                 
             case CalibrationState.Positioning:
                 // Left pinch to confirm (hold gesture)
@@ -178,7 +186,7 @@ public class CalibrationManager : MonoBehaviour
 
     private void OnLeftGripPressed()
     {
-        if (currentState == CalibrationState.Idle)
+        if (currentState == CalibrationState.Idle || currentState == CalibrationState.Confirmed)
         {
             StartPositioning();
         }
@@ -209,19 +217,25 @@ public class CalibrationManager : MonoBehaviour
             CalculateGridTransform();
             buttonGrid.transform.position = targetGridPosition;
             buttonGrid.transform.rotation = targetGridRotation;
-            buttonGrid.SetActive(true);
+            buttonGrid.SetActive(false);
         }
 
         OnCalibrationStarted?.Invoke();
         UpdateUIForState();
-        Debug.Log("[CalibrationManager] Positioning started - grid visible at fingertip");
+        Debug.Log("[CalibrationManager] Positioning started - grid hidden while tracking fingertip");
     }
 
     private void ConfirmCalibration()
     {
         currentState = CalibrationState.Confirmed;
 
-        UnsubscribeFromInput();
+        if (buttonGrid != null)
+        {
+            CalculateGridTransform();
+            buttonGrid.transform.position = targetGridPosition;
+            buttonGrid.transform.rotation = targetGridRotation;
+            buttonGrid.SetActive(true);
+        }
 
         OnCalibrationConfirmed?.Invoke();
         UpdateUIForState();
@@ -244,7 +258,7 @@ public class CalibrationManager : MonoBehaviour
 
     private void UpdateGridPosition()
     {
-        if (buttonGrid == null || indexFingerTip == null) return;
+        if (buttonGrid == null) return;
 
         CalculateGridTransform();
 
